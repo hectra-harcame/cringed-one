@@ -1,0 +1,1268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f6">
+<title>For nintea B'day kku</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌷</text></svg>">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --pink: #ff79ad;
+  --deep: #d64d88;
+  --light: #fff0f6;
+  --lavender: #eee4ff;
+  --cream: #fffaf1;
+  --ink: #613d56;
+  --muted: #9d7b94;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 20px;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: 'Nunito', sans-serif;
+  background:
+    radial-gradient(ellipse at 0% 0%, #ffe0ed, transparent 35%),
+    radial-gradient(ellipse at 100% 45%, #e8dcff, transparent 35%),
+    linear-gradient(135deg, #fffaf2, #fff0f6 55%, #f7f0ff);
+  overflow-x: hidden;
+}
+
+button, input { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, input:focus-visible {
+  outline: 3px solid #d64d88;
+  outline-offset: 3px;
+}
+
+button:disabled { cursor: not-allowed; }
+
+h1, h2, h3 {
+  font-family: 'Fredoka', 'Nunito', sans-serif;
+  line-height: 1.15;
+}
+
+p { line-height: 1.75; }
+
+.hidden { display: none !important; }
+
+.decor-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floaty {
+  position: absolute;
+  bottom: -45px;
+  color: #e975a7;
+  opacity: .45;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-115vh) rotate(320deg); }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn, .secondary-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  padding: 14px 20px;
+  font-weight: 900;
+  text-align: center;
+  transition: transform .18s, filter .18s, box-shadow .18s;
+}
+
+.primary-btn {
+  color: white;
+  background: linear-gradient(135deg, #ff8bb8, #e45796);
+  box-shadow: 0 6px 0 #c94880, 0 12px 24px #e65b981e;
+}
+
+.secondary-btn {
+  color: #b3437c;
+  background: #ffe6f0;
+  border: 1px solid #f8c9dd;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.primary-btn:active, .secondary-btn:active {
+  transform: translateY(2px);
+}
+
+.wide { width: 100%; }
+
+.entrance {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-card {
+  position: relative;
+  width: 100%;
+  max-width: 455px;
+  padding: 28px 24px;
+  text-align: center;
+  background: #ffffffdf;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 22px 65px #aa5b851c;
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+.sticker {
+  position: absolute;
+  top: 15px;
+  font-size: 25px;
+  animation: wiggle 2s ease-in-out infinite;
+}
+.sticker.left { left: 16px; }
+.sticker.right { right: 16px; animation-delay: .4s; }
+
+@keyframes wiggle {
+  50% { transform: rotate(12deg) scale(1.12); }
+}
+
+.gift {
+  display: grid;
+  place-items: center;
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 12px;
+  font-size: 96px;
+  animation: bounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 8px 5px #d85b981b);
+}
+
+@keyframes bounce {
+  50% { transform: translateY(-8px) rotate(4deg); }
+}
+
+.gift.opening {
+  animation: openGift .65s forwards;
+}
+
+@keyframes openGift {
+  45% { transform: scale(1.3) rotate(-12deg); }
+  100% { transform: scale(.1) rotate(30deg); opacity: 0; }
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 7px 13px;
+  margin-bottom: 12px;
+  color: #b7467e;
+  background: #ffeaf3;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+h1 {
+  color: var(--deep);
+  font-size: clamp(32px, 8vw, 44px);
+  margin: 0;
+}
+
+.subtitle {
+  color: #89657f;
+  font-size: 14px;
+  margin: 14px 0 23px;
+}
+
+.field-label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 900;
+  margin: 0 0 7px 3px;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 7px 5px 14px;
+  border: 2px solid #f4d2e2;
+  border-radius: 16px;
+  background: #fffafd;
+}
+
+.input-wrap:focus-within {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 4px #ff79ad1c;
+}
+
+#passwordInput {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  padding: 10px 0;
+}
+
+#passwordInput::placeholder {
+  letter-spacing: 0;
+  font-size: 12px;
+  color: #c2a1b5;
+}
+
+.toggle-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: #ffe7f1;
+}
+
+.login-card .primary-btn { margin-top: 15px; }
+
+.status {
+  min-height: 44px;
+  margin: 13px 0 0;
+  color: #c34a83;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.shake { animation: shake .4s ease; }
+
+@keyframes shake {
+  20%, 60% { transform: translateX(-6px) rotate(-1deg); }
+  40%, 80% { transform: translateX(6px) rotate(1deg); }
+}
+
+.small-note {
+  color: #b497aa;
+  font-size: 11px;
+  margin: 8px 0 0;
+}
+
+/* Loading overlay */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #fff0f6f5;
+  backdrop-filter: blur(9px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-card {
+  width: 100%;
+  max-width: 390px;
+  padding: 27px 22px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 20px 65px #a85a851f;
+  transform: translateY(15px) scale(.96);
+  transition: transform .35s;
+}
+
+.overlay.show .loading-card {
+  transform: translateY(0) scale(1);
+}
+
+.loading-emoji {
+  display: block;
+  font-size: 62px;
+  animation: wiggle .7s ease-in-out infinite alternate;
+}
+
+.loading-card h2 {
+  color: var(--deep);
+  font-size: clamp(24px, 7vw, 32px);
+  margin: 12px 0;
+}
+
+.loading-card p {
+  color: #8c6982;
+  font-size: 13px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 12px;
+  margin: 20px 0 8px;
+  background: #ffe6f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ff93bc, #c999ff);
+  transition: width .12s linear;
+}
+
+.progress-label {
+  color: #bd5488;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* Main birthday page */
+
+#birthdayPage {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 820px;
+  margin: auto;
+  padding: 28px 18px 60px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.brand {
+  color: #c34d85;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.header-pill {
+  color: #a94b7d;
+  background: #ffffffbd;
+  border: 1px solid white;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.hero {
+  position: relative;
+  padding: 40px 22px 36px;
+  text-align: center;
+  background: #ffffffc9;
+  border: 2px solid white;
+  border-radius: 30px;
+  box-shadow: 0 18px 50px #a85a8510;
+  overflow: hidden;
+}
+
+.hero-sparkles {
+  font-size: 27px;
+  letter-spacing: 8px;
+}
+
+.hero h1 {
+  margin: 18px 0 12px;
+  font-size: clamp(35px, 9vw, 61px);
+}
+
+.hero p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #896780;
+  font-size: 15px;
+}
+
+.scroll-hint {
+  margin-top: 24px;
+  color: #c35a8c;
+  font-size: 12px;
+  font-weight: 900;
+  animation: bob 1.5s infinite;
+}
+
+@keyframes bob {
+  50% { transform: translateY(5px); }
+}
+
+.section {
+  margin-top: 28px;
+  padding: 25px 21px;
+  border: 2px solid white;
+  border-radius: 26px;
+  background: #ffffffd9;
+  box-shadow: 0 14px 40px #a85a8510;
+}
+
+.section-heading {
+  margin: 0 0 8px;
+  color: var(--deep);
+  font-size: clamp(25px, 6vw, 34px);
+}
+
+.section-subtitle {
+  color: #9b7891;
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.photo-frame {
+  max-width: 370px;
+  margin: 20px auto 8px;
+  padding: 12px 12px 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 8px 24px #ad6b8b24;
+  transform: rotate(-1.5deg);
+  transition: transform .3s;
+}
+
+.photo-frame:hover { transform: rotate(0) scale(1.015); }
+
+.photo-placeholder {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  min-height: 300px;
+  padding: 20px;
+  text-align: center;
+  color: #a27695;
+  background:
+    linear-gradient(135deg, #ffeaf3, #f1eaff);
+  border: 2px dashed #dfa8c5;
+}
+
+.photo-placeholder .photo-icon { font-size: 50px; }
+
+.photo-placeholder strong {
+  font-size: 15px;
+  color: #a34f7d;
+}
+
+.photo-placeholder span {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  background: #fff0f6;
+}
+
+.photo-caption {
+  margin: 15px 0 0;
+  color: #a04e7b;
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 17px;
+}
+
+.photo-tip {
+  color: #a6889c;
+  text-align: center;
+  font-size: 11px;
+  margin: 17px 0 0;
+}
+
+/* Message cards */
+
+.message-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.message-card {
+  position: relative;
+  padding: 23px 20px;
+  background: #fffafc;
+  border: 1px solid #f8d7e6;
+  border-radius: 21px;
+  box-shadow: 0 7px 18px #b65e8910;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.message-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.message-card:nth-child(3n + 2) { background: #fff9f0; }
+.message-card:nth-child(3n) { background: #faf7ff; }
+
+.message-number {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #ffe5f0;
+  color: #b64d81;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .7px;
+}
+
+.message-card h3 {
+  margin: 0 0 10px;
+  color: #c44e86;
+  font-size: 23px;
+}
+
+.message-card p {
+  margin: 0;
+  color: #76566f;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.message-card .reveal-btn { margin-top: 16px; }
+
+.reveal-answer {
+  display: none;
+  margin-top: 14px;
+  padding: 13px;
+  color: #a34178;
+  background: #ffe9f2;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.reveal-answer.open { display: block; animation: pop .35s ease; }
+
+@keyframes pop {
+  from { opacity: 0; transform: scale(.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.reveal-btn {
+  padding: 10px 13px;
+  color: #b3477e;
+  background: #ffe5f0;
+  border: 1px solid #f7c7dc;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.final-card {
+  margin-top: 28px;
+  padding: 32px 22px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #fff8fb, #f5edff);
+  box-shadow: 0 15px 40px #a85a8514;
+}
+
+.final-card .cake {
+  font-size: 70px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.final-card h2 {
+  color: var(--deep);
+  font-size: clamp(30px, 8vw, 43px);
+  margin: 14px 0;
+}
+
+.final-letter {
+  max-width: 580px;
+  margin: 0 auto;
+  color: #795b74;
+  font-size: 15px;
+  line-height: 1.95;
+  white-space: pre-line;
+}
+
+.final-card .primary-btn { margin-top: 22px; }
+
+.last-joke {
+  display: none;
+  margin-top: 20px;
+  padding: 18px;
+  color: #ad4079;
+  background: #ffe4ef;
+  border-radius: 18px;
+  font-weight: 900;
+  line-height: 1.8;
+}
+
+.last-joke.open { display: block; animation: pop .45s ease; }
+
+.site-footer {
+  text-align: center;
+  color: #b18ba6;
+  font-size: 11px;
+  padding: 28px 8px 0;
+}
+
+.confetti {
+  position: fixed;
+  top: -35px;
+  z-index: 100;
+  pointer-events: none;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translate(var(--drift), 110vh) rotate(650deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card { padding: 26px 18px; }
+  #birthdayPage { padding: 18px 12px 42px; }
+  .hero { padding: 32px 17px; }
+  .section { padding: 21px 15px; }
+  .message-card { padding: 20px 16px; }
+  .photo-placeholder { min-height: 260px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="decor-layer" id="decorLayer" aria-hidden="true"></div>
+
+<!-- SCENE 1: PASSWORD ENTRANCE -->
+<section class="entrance" id="entrance">
+  <main class="login-card" id="loginCard">
+    <span class="sticker left">💗</span>
+    <span class="sticker right">🎀</span>
+
+    <div class="gift" id="gift" aria-hidden="true">🎁</div>
+
+    <div class="eyebrow">TOP SECRET BIRTHDAY FILE 🔐</div>
+
+    <h1>Heyyyy,<br>Kocheaaayyyyy!</h1>
+
+    <p class="subtitle">
+      Birthday queen mathramea entry oluu! <br> Trespassing not allowed🤫<br>
+      <strong>Password ariyamo, moleee? 😌</strong>
+      <br>Hint: Password wrong aaki adicha mathi 😌😂
+    </p>
+
+    <form id="passwordForm">
+      <label class="field-label" for="passwordInput">
+        ENTER YOUR SECRET CODE 👇
+      </label>
+
+      <div class="input-wrap">
+        <input
+          id="passwordInput"
+          type="password"
+          placeholder="Shhh... secret aanu 🤫"
+          autocomplete="off"
+          inputmode="numeric"
+          required
+        >
+        <button
+          type="button"
+          class="toggle-btn"
+          id="togglePassword"
+          aria-label="Show password"
+        >👀</button>
+      </div>
+
+      <button type="submit" class="primary-btn wide" id="unlockButton">
+        UNLOCK MY SURPRISE 🎁
+      </button>
+
+      <p class="status" id="errorMessage" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="small-note">Made with a little cringe and koreaaaay emojis </p>
+  </main>
+</section>
+
+<!-- SCENE 2: DRAMATIC LOADING -->
+<section class="overlay" id="loadingOverlay" aria-hidden="true">
+  <div class="loading-card">
+    <span class="loading-emoji" id="loadingEmoji">🥹🎁</span>
+    <h2 id="loadingTitle">Ndhaaa ithra aloikaaan kidakkaneaaa... 😭😂</h2>
+    <p id="loadingDescription">
+      Surprise load aavunnathaanu, NASA rocket launch alla moleee! 🚀😭
+    </p>
+
+    <div class="progress-track" role="progressbar"
+      aria-label="Preparing birthday surprise"
+      aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+      id="progressTrack">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="progress-label" id="progressLabel">
+      Preparing birthday madness... 0%
+    </div>
+  </div>
+</section>
+
+<!-- SCENES 3–5: BIRTHDAY WEBSITE -->
+<main id="birthdayPage" class="hidden">
+
+  <header class="site-header">
+    <div class="brand">♡ Sneha kochinn🌷</div>
+    <div class="header-pill">BIRTHDAY MODE: ON 🎂</div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-sparkles">✨ 💗 🎀 💗 ✨</div>
+    <div class="eyebrow">OFFICIALLY YOUR DAY</div>
+
+    <h1>HAAPPYYY<br>BIRTHDAYYY SNEHAEAYYYY! 🎂</h1>
+
+    <p>
+      SNEHEEAAAYYYYY! 👑💗<br>
+      Innu nee queen aanu. Baakki ellarum side characters.
+      Attitude kurach koodiyaalum innu adjust cheyyam! 😂
+    </p>
+
+    <div class="scroll-hint">SCROLL CHEYYU, MOWLEAAYYYY ↓</div>
+  </section>
+
+  <!-- PHOTO SECTION -->
+  <section class="section" id="photoSection">
+    <div class="eyebrow">ONE LITTLE MEMORY 📸</div>
+    <h2 class="section-heading">ORU LITTLE PHOTO CORNER 💗</h2>
+    <p class="section-subtitle">
+      Ithinu oru special place undu. 👀
+    </p>
+
+    <div class="photo-frame">
+
+      <!-- <img class="photo" src="oru-photo.jpg" alt="A special photo"> -->
+
+      <div class="photo-placeholder" id="photoPlaceholder">
+        <div class="photo-icon">📸💗</div>
+        <strong>Ividea nintea oru photo ondd</strong>
+        <span>
+          One photo. One special spot.<br>
+        </span>
+      </div>
+
+      <p class="photo-caption">
+        Nokkanda onnuilaaa! Choicha therathond therumbo veakkaam vach... 😌💗
+      </p>
+    </div>
+
+    <p class="photo-tip">
+      Adutha pravishyatheakk photo veaanam 😭.
+    </p>
+  </section>
+
+  <!-- 11 MESSAGES -->
+  <section class="section" id="messagesSection">
+    <div class="eyebrow">11 LITTLE BIRTHDAY MESSAGES 💌</div>
+    <h2 class="section-heading">THE ROAST & WISH COLLECTION 😂</h2>
+    <p class="section-subtitle">
+      Some jokes, some wishes, kurachu sentiment... over aakkaalohhhh! 😭
+    </p>
+
+    <div class="message-list">
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 01 · QUEEN ENTRY</div>
+        <h3>Birthday queen has arrived 👑</h3>
+        <p>
+          KOCHEAAAYYYYY! Ee year bright aai irikatteaa.
+          Nee chirikumbo bright avana mathiri. 😂
+        </p>
+        <button class="reveal-btn" data-reveal="reveal1">OKAY, QUEEN 👑</button>
+        <div class="reveal-answer" id="reveal1">
+          Crown tight aakki vecho. Innu full VIP treatment aanu, madam! ✨
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 02 · OFFICIAL CHARGES</div>
+        <h3>Your birthday crimes 🕵️</h3>
+        <p>
+          Cute aayi nadannu aalukale confuse cheyyunnu.
+          Unnecessary drama create cheyyunnu.
+          Pinne innocent face ittu onnum ariyatha pole nadakkunnu. 😭😂
+        </p>
+        <button class="reveal-btn" data-reveal="reveal2">EVIDENCE UNDO? 👀</button>
+        <div class="reveal-answer" id="reveal2">
+          Evidence: your entire vibe. Verdict: GUILTY.
+          Punishment: accept unlimited birthday wishes! 😂
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 03 · INSIDE JOKE</div>
+        <h3>That iconic dialogue 😭</h3>
+        <p>
+          “Mindadaa  ” 😂💗
+          Ee dialogue-inu oru award thanne kodukkanam.
+          Innocent face, dangerous dialogue. Full scene aanu neee!
+        </p>
+        <button class="reveal-btn" data-reveal="reveal3">PARAYOO, PARAYOO 👀</button>
+        <div class="reveal-answer" id="reveal3">
+          Okay, okay, njan mindathe irunnolaam...
+          pakshe birthday roast cancel cheyyan pattilla! 😭😂
+        </div>
+      </article>
+
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 04 · DRAMA DEPARTMENT</div>
+        <h3>Peace was never an option 😂</h3>
+        <p>
+          Ninte life-il boring moments kuravaayirikkatte.
+          Pakshe drama create cheyyumbol innocent aayi act cheyyunna talent
+          kurach control cheyyanam, madam. 😭
+        </p>
+        <button class="reveal-btn" data-reveal="reveal5">WHO, ME? NEVER! 😇</button>
+        <div class="reveal-answer" id="reveal5">
+          Athe athe, nee full innocent aanu. Njan onnum paranjilla! 😂
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 05 · PHOTO TAX</div>
+        <h3>One photo, one special spot 📸</h3>
+        <p>
+          Oru photo maathram… pakshe ee website-il athinu oru special place undu. 👀💗
+        </p>
+        <button class="reveal-btn" data-reveal="reveal6">CLASSIFIED DETAILS 🔐</button>
+        <div class="reveal-answer" id="reveal6">
+          Photo count: 1. Drama count: Uncountable.😂
+          Birthday queen details: top secret! 😂💗
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 06 · BIRTHDAY WISH</div>
+        <h3>Birthday privileges 🎂</h3>
+        <p>
+          Innu ninakku unlimited happiness, unlimited food, zero stress,
+          full sleep, and lots of reasons to smile kittatte.
+          Problems vannal return to sender! Delivery charge avar pay cheyyatte. ✨
+        </p>
+        <button class="reveal-btn" data-reveal="reveal7">WISH ACCEPTED 💗</button>
+        <div class="reveal-answer" id="reveal7">
+          Wishing you a year full of good surprises, genuine happiness,
+          and little moments that make you smile. 🌷
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 07 · LITTLE TRUTH</div>
+        <h3>Just being you 💗</h3>
+        <p>
+          Chila aalukal nammade life-il special aavunnath years of friendship
+          kond maathramalla. Sometimes, avar avar aayath kond thanne.
+          Nee angane oraal aanu. 🥹
+        </p>
+        <button class="reveal-btn" data-reveal="reveal8">AYYOO, SENTIMENTS AAYO? 🥹</button>
+        <div class="reveal-answer" id="reveal8">
+          Okay, emotional scene kazhinju. Ini chiricholu, birthday queen!❎ birthnaaaal queen✅ 😂💗
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 08 · MAIN CHARACTER</div>
+        <h3>Your year, your rules ✨</h3>
+        <p>
+          Ninte dreams follow cheyyu, ninte pace-il grow cheyyu,
+          ninte happiness choose cheyyu.
+          Main character energy maintain cheyyanam. Side character aavan
+          njan permission tharunnilla! 😂👑
+        </p>
+        <button class="reveal-btn" data-reveal="reveal9">MAIN CHARACTER CONFIRMED</button>
+        <div class="reveal-answer" id="reveal9">
+          May this year bring you new opportunities, confidence,
+          and plenty of reasons to be proud of yourself. 💗
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 9 · CAKE TAX</div>
+        <h3>An extremely serious question 🎂</h3>
+        <p>
+          Cake cut cheyyumbol enikku share undo?
+          Ee website undaakkiyathinte payment cake aayi accept cheyyunnathaanu.
+          Cash venda. Cake mathi. 😂
+        </p>
+        <button class="reveal-btn" data-reveal="reveal10">CAKE SHARE APPROVED?</button>
+        <div class="reveal-answer" id="reveal10">
+          Correct answer: YES. Wrong answer: cake tax department will contact you. 😂
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 10 · NO JOKES FOR A SECOND</div>
+        <h3>A small, sincere wish 🥹</h3>
+        <p>
+          I hope this year gives you genuine happiness, good people,
+          and little moments that make life feel special.
+          Nee eppozhum ellavareyum entertain cheyyenda avashyam illa.
+          Just being yourself is enough. And I'm genuinely glad I got to know you. 💗
+        </p>
+        <button class="reveal-btn" data-reveal="reveal11">OKAY, ONE LAST PAGE 💌</button>
+        <div class="reveal-answer" id="reveal11">
+          You deserve kindness, happiness, and people who appreciate you
+          for exactly who you are. Never forget that. 🌷
+        </div>
+      </article>
+
+      <article class="message-card">
+        <div class="message-number">MESSAGE 11 · THE BIG FINALE</div>
+        <h3>Happyyyy Birthdayyy! 🎉</h3>
+        <p>
+          HAPPYYYY BIRTHDAYYY, Mowleaaaa Sneheaaayyyyy! 💗👑
+          Keep smiling, keep dreaming, and keep being your wonderfully
+          chaotic self. I hope this new year brings you more happiness
+          than you expect and plenty of reasons to feel proud of yourself.
+          <br><br>
+          Nee ente life-il special aaya oraal aanu. 🥹💗
+        </p>
+        <button class="reveal-btn" data-reveal="reveal12">OKAY, ENOUGH EMOTIONS 😂</button>
+        <div class="reveal-answer" id="reveal12">
+          Pinne… “Mindandaa” ennu
+          paranjittu enne pedippikkaruthu, povaanu nikaall. Birthday aanennu vechu
+          ella crimes-um forgive cheyyan pattilla! 😭😂
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FINAL CELEBRATION -->
+  <section class="final-card" id="finale">
+    <div class="cake">🎂</div>
+    <div class="eyebrow">ONE LAST LITTLE SURPRISE</div>
+
+    <h2>Happy Birthday,<br>Sneha Mowleaaaayy! 💗</h2>
+
+    <div class="final-letter">
+I hope your new year is filled with happiness, beautiful surprises,
+genuine people, and moments that make you smile for no reason.
+
+Keep being yourself, keep dreaming big, and never forget that you deserve
+good things.
+
+I'm genuinely glad I got to know you.
+Innu full happy aayi irikku, birthday girl. 🥹💗
+    </div>
+
+    <button class="primary-btn" id="finalButton">
+      OKAY, ENOUGH EMOTIONS 😂
+    </button>
+
+    <div class="last-joke" id="lastJoke">
+      HAPPYYYY BIRTHDAYYY, SNEHA KOCHEAAAYYYYY! 🎉👑💗<br><br>
+      P.S. Cake enikku venam. Ithoru request alla.
+      Ithoru legal notice aanu. 😭🎂<br><br>
+      Mindathea niku parnj peadippikalleaa ini...
+      pakshe njan kaliyakkal continue cheyyum! 😂💗
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    Made with little cringe, koreaaay emojis, and with little love... 😂<br>
+    Happy Birthday, Sneha kocheaaayyyyy! 💗🌷
+  </footer>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const $ = (selector) => document.querySelector(selector);
+
+  const form = $("#passwordForm");
+  const input = $("#passwordInput");
+  const toggle = $("#togglePassword");
+  const error = $("#errorMessage");
+  const loginCard = $("#loginCard");
+  const gift = $("#gift");
+  const unlockButton = $("#unlockButton");
+
+  const loadingOverlay = $("#loadingOverlay");
+  const loadingEmoji = $("#loadingEmoji");
+  const loadingTitle = $("#loadingTitle");
+  const loadingDescription = $("#loadingDescription");
+  const progressFill = $("#progressFill");
+  const progressLabel = $("#progressLabel");
+  const progressTrack = $("#progressTrack");
+
+  const entrance = $("#entrance");
+  const birthdayPage = $("#birthdayPage");
+
+  let wrongCount = 0;
+  let isUnlocking = false;
+  let loadingTimer = null;
+  let messageTimer = null;
+
+  // Floating background decorations
+  const decor = $("#decorLayer");
+  const symbols = ["♡", "✦", "✧", "♥", "🎀", "✿", "🌷"];
+
+  for (let i = 0; i < 24; i++) {
+    const item = document.createElement("span");
+    item.className = "floaty";
+    item.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    item.style.left = Math.random() * 100 + "%";
+    item.style.fontSize = 12 + Math.random() * 20 + "px";
+    item.style.animationDuration = 9 + Math.random() * 13 + "s";
+    item.style.animationDelay = -(Math.random() * 16) + "s";
+    decor.appendChild(item);
+  }
+
+  // Password visibility
+  toggle.addEventListener("click", function () {
+    const show = input.type === "password";
+    input.type = show ? "text" : "password";
+    toggle.textContent = show ? "🙈" : "👀";
+    toggle.setAttribute("aria-label", show ? "Hide password" : "Show password");
+  });
+
+  // Confetti
+  function launchConfetti(amount = 80) {
+    const choices = ["💗", "🎀", "✨", "💕", "🎉", "🌸", "⭐", "🌷"];
+
+    for (let i = 0; i < amount; i++) {
+      const piece = document.createElement("span");
+      piece.className = "confetti";
+      piece.textContent = choices[Math.floor(Math.random() * choices.length)];
+      piece.style.left = Math.random() * 100 + "vw";
+      piece.style.fontSize = 12 + Math.random() * 20 + "px";
+      piece.style.animationDuration = 2 + Math.random() * 2.5 + "s";
+      piece.style.animationDelay = Math.random() * .6 + "s";
+      piece.style.setProperty("--drift", (Math.random() - .5) * 240 + "px");
+      document.body.appendChild(piece);
+      setTimeout(() => piece.remove(), 6000);
+    }
+  }
+
+  // Wrong-password jokes
+  const wrongMessages = [
+    "Ayyo Sneheaaayyyyy 😭😂 Ninte birthdate aanu password, birthnaaaal alla! 🎂💗",
+    "CID investigation venam ennu thonnunnallo! 😂 Onnu koode try cheyy, moleee! 🔍",
+    "Aiyyeee, wrong aayi! 😭 Birthday queen aanennu prove cheyyande? 👑",
+    "Password thettichittu innocent face idanda kettooo! 😌😂"
+  ];
+
+  // Loading jokes
+  const loadingMessages = [
+    {
+      emoji: "🥹🎁",
+      title: "Ndhaaa ithra aloikaaan kidakkaneaaa... 😭😂",
+      description: "Surprise load aavunnathaanu, NASA rocket launch alla mowleee! 🚀😭"
+    },
+    {
+      emoji: "👀💗",
+      title: "Oru second patience kaanikk, Kocheaaayyyyy!",
+      description: "Ithra impatient aanel birthday cake engane wait cheyyum? 😂🎂"
+    },
+    {
+      emoji: "🫠🎀",
+      title: "Almost readyyy... drama venda!",
+      description: "Surprise escape aavilla. Nee onnu relax cheyyu! 😭✨"
+    },
+    {
+      emoji: "🎉👑",
+      title: "Birthday madness loadinggg!",
+      description: "Ready aayikko, birthday queen! 💗"
+    }
+  ];
+
+  function beginLoading() {
+    loadingOverlay.classList.add("show");
+    loadingOverlay.setAttribute("aria-hidden", "false");
+    gift.classList.add("opening");
+
+    let progress = 0;
+    let messageIndex = 0;
+
+    loadingEmoji.textContent = loadingMessages[0].emoji;
+    loadingTitle.textContent = loadingMessages[0].title;
+    loadingDescription.textContent = loadingMessages[0].description;
+
+    messageTimer = setInterval(function () {
+      messageIndex = (messageIndex + .5) % loadingMessages.length;
+      const message = loadingMessages[messageIndex];
+
+      loadingEmoji.textContent = message.emoji;
+      loadingTitle.textContent = message.title;
+      loadingDescription.textContent = message.description;
+    }, 1000);
+
+    loadingTimer = setInterval(function () {
+      progress = Math.min(progress + .8, 100);
+      progressFill.style.width = progress + "%";
+      progressLabel.textContent = "Preparing birthday madness... " + progress + "%";
+      progressTrack.setAttribute("aria-valuenow", String(progress));
+
+      if (progress >= 100) {
+        clearInterval(loadingTimer);
+        clearInterval(messageTimer);
+
+        loadingOverlay.classList.remove("show");
+        loadingOverlay.setAttribute("aria-hidden", "true");
+
+        entrance.classList.add("hidden");
+        birthdayPage.classList.remove("hidden");
+
+        window.scrollTo({ top: 0, behavior: "instant" });
+        launchConfetti(100);
+        observeMessages();
+      }
+    }, 55);
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (isUnlocking) return;
+
+    if (input.value.trim() !== "28") {
+      error.textContent = wrongMessages[wrongCount % wrongMessages.length];
+      wrongCount++;
+
+      loginCard.classList.remove("shake");
+      void loginCard.offsetWidth;
+      loginCard.classList.add("shake");
+
+      input.value = "";
+      input.focus();
+      return;
+    }
+
+    isUnlocking = true;
+    error.textContent = "AYYYYY! PASSWORD CORRECT! 💗🎉";
+    unlockButton.disabled = true;
+    unlockButton.textContent = "OPENING YOUR GIFT... 🎁";
+
+    launchConfetti(45);
+    beginLoading();
+  });
+
+  // Reveal bonus messages when their buttons are clicked
+  document.querySelectorAll("[data-reveal]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const target = document.getElementById(button.dataset.reveal);
+      if (!target) return;
+
+      const isOpen = target.classList.toggle("open");
+      button.setAttribute("aria-expanded", String(isOpen));
+
+      if (isOpen) {
+        button.textContent = "OKAY, CLOSE IT 🙈";
+      } else {
+        button.textContent = button.dataset.originalLabel || "REVEAL AGAIN 👀";
+      }
+
+      if (!button.dataset.originalLabel) {
+        button.dataset.originalLabel = button.textContent;
+      }
+    });
+  });
+
+  // Scroll-reveal animation
+  let observer;
+
+  function observeMessages() {
+    const cards = document.querySelectorAll(".message-card");
+
+    if (!("IntersectionObserver" in window)) {
+      cards.forEach(card => card.classList.add("visible"));
+      return;
+    }
+
+    if (observer) observer.disconnect();
+
+    observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .08 });
+
+    cards.forEach(card => observer.observe(card));
+  }
+
+  // Final celebration
+  const finalButton = $("#finalButton");
+  const lastJoke = $("#lastJoke");
+
+  finalButton.addEventListener("click", function () {
+    const opened = lastJoke.classList.toggle("open");
+
+    if (opened) {
+      finalButton.textContent = "HAPPY BIRTHDAY, KOCHEAAAYYYYY! 🎉";
+      launchConfetti(130);
+      lastJoke.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      finalButton.textContent = "OKAY, ENOUGH EMOTIONS 😂";
+    }
+  });
+});
+</script>
+</body>
+</html>
